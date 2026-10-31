@@ -1,0 +1,2 @@
+﻿La función de CafeFET acepta un pedido inválido porque el número de productos es 6, lo cual está dentro del límite permitido de 6, pero el costo total de los productos (6 * 2000 = 12000) excede el límite de saldo permitido (est.saldo - 12000 < -1000). El saldo inicial es 11000, por lo que el nuevo saldo sería 11000 - 12000 = -1000, lo cual es igual al límite de saldo, pero no menor de -1000, lo que hace que el pedido sea inválido.
+

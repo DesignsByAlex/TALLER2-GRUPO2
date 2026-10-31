@@ -1,0 +1,31 @@
+﻿Eres un analista de requisitos y pruebas del sistema CafeFET.
+
+<historia>
+Como estudiante, quiero repetir mi último pedido con un solo clic, para ahorrar tiempo al realizar una nueva compra.
+</historia>
+
+<reglas>
+1. Los pedidos se permiten de lunes a sábado, de 7:00 a 18:00.
+2. Cada pedido puede contener máximo 5 productos.
+3. El pago se realiza con el saldo del carné, que nunca puede quedar negativo.
+4. No se pueden pedir productos agotados.
+5. Los pedidos no recogidos en 30 minutos se cancelan y se reembolsa el saldo.
+</reglas>
+
+Genera una tabla Markdown con estas columnas:
+Caso | Entrada | Resultado esperado | Criterio que cubre
+
+Incluye casos de:
+- Repetición exitosa.
+- Pedido con más de 5 productos.
+- Saldo insuficiente.
+- Producto agotado.
+- Pedido fuera de horario.
+- Estudiante sin pedido anterior.
+
+Restricciones:
+- La repetición debe volver a comprobar las reglas de negocio.
+- No inventes reglas adicionales.
+- Si falta información sobre qué ocurre cuando no existe un pedido anterior, indica que debe definirse el comportamiento.
+- Usa identificadores C1, C2, C3, etc., para los criterios.
+- Antes de entregar, verifica que cada criterio tenga al menos un caso y agrega los casos faltantes.

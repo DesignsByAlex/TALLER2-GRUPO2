@@ -1,0 +1,20 @@
+﻿Eres ingeniero de pruebas de CafeFET.
+
+<historia>
+Como estudiante, quiero repetir mi último pedido con un solo clic, para ahorrar tiempo al comprar nuevamente.
+</historia>
+
+<reglas>
+Horario: lunes a sábado, 7:00 a 18:00.
+Máximo 5 productos.
+Saldo del carné nunca negativo.
+No incluir productos agotados.
+Cancelar y reembolsar pedidos no recogidos en 30 minutos.
+</reglas>
+
+Genera una tabla Markdown con las columnas:
+Caso | Entrada | Resultado esperado | Criterio que cubre
+
+Incluye pruebas de repetición exitosa, falta de historial, horario inválido, saldo insuficiente, producto agotado y máximo de productos.
+Antes de entregar, revisa que cada criterio tenga al menos un caso; si falta, agrégalo e indica cuál agregaste.
+No inventes reglas adicionales.

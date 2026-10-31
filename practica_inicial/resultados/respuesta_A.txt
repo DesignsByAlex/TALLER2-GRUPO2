@@ -1,0 +1,65 @@
+﻿Aqu├¡ tienes un ejemplo completo y profesional de pruebas unitarias utilizando **`unittest`** (la biblioteca est├índar de Python) para una funci├│n ficticia llamada `calcular_total_cafe_fet`.
+
+Este c├│digo simula una tienda virtual donde el total se calcula sumando el precio del caf├®, aplicando un descuento si hay un cup├│n v├ílido y verificando que no haya precios negativos.
+
+### C├│digo de Pruebas (`test_calculadora.py`)
+
+```python
+import unittest
+from math import floor
+
+# --- C├ôDIGO A PRUEBAR (Simulaci├│n de la librer├¡a CafeFET) ---
+def calcular_total_cafe_fet(precio_caf├®, cantidad, tiene_cup├│n=False, valor_cup├│n=0.1):
+    """
+    Calcula el total final de una compra en CafeFET.
+    
+    Par├ímetros:
+    - precio_caf├® (float): Precio unitario del caf├®.
+    - cantidad (int): Cantidad de unidades compradas.
+    - tiene_cup├│n (bool): ┬┐El cliente tiene un cup├│n v├ílido?
+    - valor_cup├│n (float): Porcentaje de descuento (ej. 0.1 para 10%).
+    
+    Retorna:
+    - float: El precio total final redondeado a 2 decimales.
+    """
+    if precio_caf├® < 0 or cantidad < 0:
+        raise ValueError("El precio y la cantidad no pueden ser negativos.")
+    
+    subtotal = precio_caf├® * cantidad
+    
+    if tiene_cup├│n:
+        descuento = subtotal * valor_cup├│n
+        total = subtotal - descuento
+    else:
+        total = subtotal
+        
+    return round(total, 2)
+
+# --- DEFINICI├ôN DE PRUEBAS ---
+class TestCalculadoraCafeFet(unittest.TestCase):
+
+    def test_calculo_basico_sin_descuento(self):
+        """Verifica el c├ílculo est├índar sin cup├│n."""
+        resultado = calcular_total_cafe_fet(5.0, 2, tiene_cup├│n=False)
+        self.assertEqual(resultado, 10.0)
+
+    def test_calculo_con_descuento(self):
+        """Verifica que se aplique el descuento correctamente (10%)."""
+        # Precio: 5.0 * 2 = 10.0
+        # Descuento: 10.0 * 0.1 = 1.0
+        # Total: 9.0
+        resultado = calcular_total_cafe_fet(5.0, 2, tiene_cup├│n=True)
+        self.assertEqual(resultado, 9.0)
+
+    def test_calculo_con_monto_grande(self):
+        """Verifica c├ílculos con valores m├ís altos."""
+        resultado = calcular_total_cafe_fet(12.5, 4, tiene_cup├│n=False)
+        self.assertEqual(resultado, 50.0)
+
+    def test_calculo_con_descuento_monto_grande(self):
+        """Verifica descuento en compras grandes."""
+        # 12.5 * 4 = 50.0
+        # Descuento 10% = 5.0
+        # Total = 45.0
+        resultado = calcular_total_cafe
+

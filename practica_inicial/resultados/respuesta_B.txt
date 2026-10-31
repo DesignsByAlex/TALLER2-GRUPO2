@@ -1,0 +1,61 @@
+﻿```python
+import pytest
+
+
+def test_calcular_total_compra_normal():
+    """Prueba una compra normal con precios y descuento."""
+    precios = [10.5, 20.0, 15.5]
+    descuento = 10
+    resultado = calcular_total(precios, descuento)
+    
+    # Suma: 46.0, Descuento 10% -> 41.4
+    assert resultado == 41.4
+
+
+def test_calcular_total_lista_vacia():
+    """Prueba con una lista de precios vac├¡a."""
+    precios = []
+    descuento = 5
+    resultado = calcular_total(precios, descuento)
+    
+    assert resultado == 0.0
+
+
+def test_calcular_total_descuento_cero():
+    """Prueba con un descuento del 0%."""
+    precios = [100.0]
+    descuento = 0
+    resultado = calcular_total(precios, descuento)
+    
+    # Suma: 100.0, Descuento 0% -> 100.0
+    assert resultado == 100.0
+
+
+def test_calcular_total_desciento_cien():
+    """Prueba con un descuento del 100%."""
+    precios = [50.0, 25.0]
+    descuento = 100
+    resultado = calcular_total(precios, descuento)
+    
+    # Suma: 75.0, Descuento 100% -> 0.0
+    assert resultado == 0.0
+
+
+def test_calcular_total_precio_negativo():
+    """Prueba que lanza ValueError si hay precios negativos."""
+    precios = [10.0, -5.0]
+    descuento = 10
+    
+    with pytest.raises(ValueError):
+        calcular_total(precios, descuento)
+
+
+def test_calcular_total_descuento_inv├ílido():
+    """Prueba que lanza ValueError si el descuento est├í fuera del rango."""
+    precios = [10.0]
+    descuento = 150  # Fuera del rango permitido (0-100)
+    
+    with pytest.raises(ValueError):
+        calcular_total(precios, descuento)
+```
+

@@ -1,0 +1,13 @@
+﻿Eres analista de requisitos de CafeFET.
+
+Estos son dos ejemplos originales de historias de usuario:
+Ejemplo 1: Como estudiante, quiero consultar mi saldo del carné, para saber cuánto puedo gastar.
+Ejemplo 2: Como encargado de cafetería, quiero ver los pedidos pendientes, para preparar los productos a tiempo.
+
+Ahora convierte este requisito en una historia de usuario usando exactamente el formato Como..., quiero..., para...:
+
+<requisito>
+Que el estudiante pueda repetir su último pedido con un solo clic.
+</requisito>
+
+No inventes funcionalidades ajenas al requisito.

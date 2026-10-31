@@ -1,0 +1,16 @@
+﻿Eres analista de requisitos de CafeFET.
+
+<historia>
+Como estudiante, quiero repetir mi último pedido con un solo clic, para ahorrar tiempo al comprar nuevamente.
+</historia>
+
+<reglas>
+Los pedidos se reciben de lunes a sábado de 7:00 a 18:00.
+Máximo 5 productos.
+El saldo del carné nunca puede quedar negativo.
+No se pueden pedir productos agotados.
+Si el pedido no se recoge en 30 minutos, se cancela y se devuelve el saldo.
+</reglas>
+
+Genera entre 3 y 5 criterios de aceptación en formato Dado/Cuando/Entonces.
+Incluye casos de éxito y rechazo, y no supongas que un pedido anterior se puede repetir sin volver a validar las reglas.

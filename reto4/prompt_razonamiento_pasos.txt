@@ -1,0 +1,23 @@
+﻿Evalúa paso a paso la siguiente función de CafeFET:
+
+def crear_pedido(est, productos, hora):
+    if len(productos) > 6:
+        return False
+    if est.saldo - sum(p.precio for p in productos) < -1000:
+        return False
+    return 7 <= hora <= 18
+
+Datos:
+- Día: lunes.
+- Hora: 10.
+- Número de productos: 6.
+- Precio de cada producto: 2000.
+- Saldo del estudiante: 11000.
+
+Explica:
+1. Cuánto vale len(productos) > 6.
+2. Cuánto cuesta el pedido.
+3. Cuánto vale est.saldo - costo_total < -1000.
+4. Cuánto vale 7 <= hora <= 18.
+5. Qué devuelve la función.
+6. Qué reglas de CafeFET incumple el pedido.

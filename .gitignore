@@ -1,0 +1,5 @@
+﻿base-docente/
+.venv/
+__pycache__/
+*.pyc
+.env

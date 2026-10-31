@@ -1,0 +1,31 @@
+QUÉ QUIERO:
+Desarrolla en Python una función para crear pedidos anticipados en CafeFET.
+
+PARA QUIÉN:
+Para los desarrolladores del sistema de cafetería de la FET, que necesitan implementar las reglas de negocio correctamente.
+
+CONTEXTO:
+CafeFET es un sistema ficticio que permite a los estudiantes realizar pedidos anticipados y pagar utilizando el saldo de su carné.
+
+<reglas>
+1. Se reciben pedidos de lunes a sábado, de 7:00 a 18:00.
+2. Se permiten máximo 5 productos por pedido.
+3. El pago se realiza con el saldo del carné y este nunca puede quedar negativo.
+4. Los productos agotados no se pueden pedir.
+5. Si el pedido no se recoge en 30 minutos, se cancela y se devuelve el saldo.
+</reglas>
+
+FORMATO DE SALIDA:
+- Entrega código Python.
+- Implementa una función llamada crear_pedido.
+- Explica brevemente los parámetros y el valor de retorno.
+- Incluye dos ejemplos: uno de pedido válido y otro rechazado.
+- Explica cómo se gestionaría la cancelación y devolución del saldo después de 30 minutos.
+
+RESTRICCIONES:
+- Respeta las cinco reglas de negocio.
+- No inventes reglas adicionales.
+- No permitas pedidos que excedan cinco productos.
+- No permitas saldos negativos.
+- No aceptes productos agotados.
+- Si necesitas asumir algún detalle técnico que no está especificado, indícalo explícitamente.

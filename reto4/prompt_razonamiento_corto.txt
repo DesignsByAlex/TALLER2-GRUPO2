@@ -1,0 +1,10 @@
+﻿En una sola línea, explica por qué esta función de CafeFET acepta un pedido inválido:
+
+def crear_pedido(est, productos, hora):
+    if len(productos) > 6:
+        return False
+    if est.saldo - sum(p.precio for p in productos) < -1000:
+        return False
+    return 7 <= hora <= 18
+
+Datos: lunes, hora 10, seis productos de 2000 cada uno y saldo de 11000.

@@ -1,0 +1,21 @@
+Actúa como ingeniero de pruebas de software especializado en Python.
+
+**Objetivo:** generar pruebas unitarias para la función `calcular_total` del sistema ficticio CafeFET.
+
+**Contexto y reglas de este ejercicio:**
+- La función recibe `precios`, una lista de números no negativos.
+- Recibe `descuento`, un número entre 0 y 100 que representa un porcentaje.
+- Calcula la suma de los precios y aplica el descuento porcentual.
+- Si la lista está vacía, devuelve `0.0`.
+- Si hay precios negativos o el descuento está fuera del rango permitido, lanza `ValueError`.
+
+**Firma de la función:**
+`def calcular_total(precios: list[float], descuento: float) -> float:`
+
+**Formato de salida:**
+- Genera código Python utilizando `pytest`.
+- Incluye pruebas para una compra normal, lista vacía, descuento del 0 %, descuento del 100 %, precio negativo y descuento inválido.
+- Utiliza `assert` para verificar los resultados.
+- Entrega solamente el código de las pruebas.
+
+No inventes reglas adicionales.

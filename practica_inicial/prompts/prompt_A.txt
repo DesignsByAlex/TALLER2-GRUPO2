@@ -1,0 +1,1 @@
+Genera pruebas unitarias en Python para una función que calcula el total de una compra en CafeFET.
